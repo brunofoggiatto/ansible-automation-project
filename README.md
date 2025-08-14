@@ -72,13 +72,13 @@ A playbook is a YAML file where you define the automation tasks. Create a file n
 ```
 ### How the Playbook Works
 
-* **`hosts: ubuntu_servers`**: Informa ao Ansible para executar o playbook em todos os servidores listados no grupo `[ubuntu_servers]` do seu arquivo de inventário `hosts`.
+* **`hosts: ubuntu_servers`**: Tells Ansible to run the playbook on all servers listed in the `[ubuntu_servers]` group of your `hosts` inventory file.
 
-* **`become: yes`**: Instrui o Ansible a usar escalonamento de privilégios (como o comando `sudo`) para executar as tarefas, o que é necessário para atualizações do sistema.
+* **`become: yes`**: Instructs Ansible to use privilege escalation (like `sudo`) to execute tasks, which is necessary for system updates.
 
-* **`tasks:`**: Esta seção lista as ações a serem executadas.
-    * A primeira tarefa, **Update apt package cache**, é equivalente a executar o comando `sudo apt update`.
-    * A segunda tarefa, **Upgrade all packages**, é equivalente a executar `sudo apt dist-upgrade`.
+* **`tasks:`**: This section lists the actions to be performed.
+    * The first task, **Update apt package cache**, is equivalent to running `sudo apt update`.
+    * The second task, **Upgrade all packages**, is equivalent to running `sudo apt dist-upgrade`.
 
 # Execute the Playbook
 
