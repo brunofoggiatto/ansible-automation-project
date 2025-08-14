@@ -51,7 +51,7 @@ The inventory is a file that lists the servers (or "nodes") that Ansible will ma
 
 A playbook is a YAML file where you define the automation tasks. Create a file named system_upgrade.yml to update all the servers listed in your inventory.
 
-# Important: YAML syntax is very strict about indentation. Use spaces (not tabs) and ensure the structure is correct.
+**Important**: YAML syntax is very strict about indentation. Use spaces (not tabs) and ensure the structure is correct.
 ```bash
 ---
 - name: Update and upgrade the system
