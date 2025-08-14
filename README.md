@@ -11,7 +11,7 @@
 
 ## Install Ansible
 
-First, you need to install Ansible on your local machine (the local computer you will use to manage other servers)..
+First, you need to install Ansible on your local machine (the local computer you will use to manage other servers)
 
 ```bash
 sudo apt update
@@ -22,6 +22,7 @@ sudo apt install ansible -y
 
 Now, in your local machine, you need to generate your SSH key for instant connection to your virtual machines, this will allow you to connect without typing your password each time.
 When prompted, press Enter to accept the default file location and when asked for a passphrase, press Enter twice to leave it empty.
+
 ```bash
 ssh-keygen
 ```
@@ -30,6 +31,7 @@ ssh-keygen
 # Copy the Public Key to Your VMs
 
 Next, copy your public key to each virtual machine you want to manage.
+
 ```bash
 ssh-copy-id [username]@[ip]
 ```
@@ -39,6 +41,7 @@ The first time you run this for each VM, you'll be prompted for the user's passw
 # Configure the Inventory
 
 The inventory is a file that lists the servers (or "nodes") that Ansible will manage. Create a file named hosts in your project directory with the following format:
+
 ```bash
 [ubuntu_servers]
 192.168.1.101 
@@ -52,6 +55,7 @@ The inventory is a file that lists the servers (or "nodes") that Ansible will ma
 A playbook is a YAML file where you define the automation tasks. Create a file named system_upgrade.yml to update all the servers listed in your inventory.
 
 **Important**: YAML syntax is very strict about indentation. Use spaces (not tabs) and ensure the structure is correct.
+
 ```bash
 ---
 - name: Update and upgrade the system
@@ -79,6 +83,7 @@ A playbook is a YAML file where you define the automation tasks. Create a file n
 # Execute the Playbook
 
 Finally, run your playbook from your control machine using the ansible-playbook command.
+
 ```bash
 ansible-playbook system_upgrade.yml -i ubuntu_servers
 ```
