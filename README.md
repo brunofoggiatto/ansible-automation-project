@@ -25,7 +25,7 @@ When prompted, press Enter to accept the default file location and when asked fo
 ```bash
 ssh-keygen
 ```
-# Security Note: For production environments, it is highly recommended to use a strong passphrase to protect your private key.
+**Security Note**: For production environments, it is highly recommended to use a strong passphrase to protect your private key.
 
 # Copy the Public Key to Your VMs
 
@@ -45,7 +45,7 @@ The inventory is a file that lists the servers (or "nodes") that Ansible will ma
 192.168.1.102
 ...
 ```
-# Note: The connection method and variables can differ for other operating systems. For example, managing Windows machines requires a different configuration in the inventory.
+**Note**: The connection method and variables can differ for other operating systems. For example, managing Windows machines requires a different configuration in the inventory.
 
 # Create a Simple Playbook
 
