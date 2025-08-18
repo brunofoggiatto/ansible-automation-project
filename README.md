@@ -1,4 +1,4 @@
-# Ansible Automation Project (Ubuntu 22.04)
+# Ansible Simple Automation 
 ## This guide provides a practical, step-by-step introduction to using Ansible playbooks for automating common tasks on virtual machines with ssh connection. It's designed for beginners who want to get started with infrastructure automation.
 
 ## Table of Contents
