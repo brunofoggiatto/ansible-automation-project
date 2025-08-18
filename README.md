@@ -2,12 +2,12 @@
 ## This guide provides a practical, step-by-step introduction to using Ansible playbooks for automating common tasks on virtual machines with ssh connection. It's designed for beginners who want to get started with infrastructure automation.
 
 ## Table of Contents
-- [Install Ansible](#Installing-Ansible)
-- [Generate Your SSH Key](#Key)
-- [Copy the Public Key to Your VMs](#Copy-Key)
-- [Configure the Inventory](#Inventory)
-- [Create a Simple Playbook](#Playbook)
-- [Execute the Playbook](#Execute)
+- [Install Ansible](#install-ansible)
+- [Generate Your SSH Key](#generate-your-ssh-key)
+- [Copy the Public Key to Your VMs](#copy-the-public-key-to-your-vms)
+- [Configure the Inventory](#configure-the-inventory)
+- [Create a Simple Playbook](#create-a-simple-playbook)
+- [Execute the Playbook](#execute-the-playbook)
 
 ## Install Ansible
 
