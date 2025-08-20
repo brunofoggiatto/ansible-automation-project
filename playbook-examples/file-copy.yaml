@@ -1,0 +1,11 @@
+- name: Copy a config file
+  hosts: all
+  become: yes
+  tasks:
+    - name: Deploy nginx config
+      ansible.builtin.copy:
+        src: files/nginx.conf
+        dest: /etc/nginx/nginx.conf
+        owner: root
+        group: root
+        mode: '0644'
