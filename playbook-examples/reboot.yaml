@@ -1,0 +1,9 @@
+- name: Reboot server
+  hosts: all
+  become: yes
+  tasks:
+    - name: Reboot machine
+      ansible.builtin.reboot:
+        msg: "Reboot initiated by Ansible"
+        connect_timeout: 5
+        reboot_timeout: 600
