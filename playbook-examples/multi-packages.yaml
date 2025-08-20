@@ -1,0 +1,7 @@
+    - name: Install common tools
+      ansible.builtin.apt:
+        name:
+          - curl
+          - git
+          - vim
+        state: present
