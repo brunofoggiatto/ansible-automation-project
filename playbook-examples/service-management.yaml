@@ -1,0 +1,9 @@
+- name: Ensure nginx is running
+  hosts: all
+  become: yes
+  tasks:
+    - name: Start nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: yes
