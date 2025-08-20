@@ -1,0 +1,9 @@
+- name: Create a user
+  hosts: all
+  become: yes
+  tasks:
+    - name: Add dev user
+      ansible.builtin.user:
+        name: devuser
+        groups: sudo
+        state: present
