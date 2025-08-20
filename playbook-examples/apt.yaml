@@ -1,0 +1,9 @@
+---
+- name: How to install using apt
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install nginx
+      ansible.builtin.apt:
+        name: nginx
+        state: present
