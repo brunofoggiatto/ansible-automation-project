@@ -1,5 +1,5 @@
 # Ansible Simple Automation 
-## This guide provides a practical, step-by-step introduction to using Ansible playbooks for automating common tasks on virtual machines with ssh connection. It's designed for beginners who want to get started with infrastructure automation.
+## This guide provides a practical, step-by-step introduction to using Ansible playbooks for automating common tasks on virtual machines with ssh connection.
 
 ## Table of Contents
 - [Install Ansible](#install-ansible)
