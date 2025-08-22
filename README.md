@@ -9,6 +9,8 @@
 - [Create a Simple Playbook](#create-a-simple-playbook)
 - [Execute the Playbook](#execute-the-playbook)
 
+---
+
 ## Install Ansible
 
 First, you need to install Ansible on your local machine (the local computer you will use to manage other servers)
@@ -18,15 +20,23 @@ sudo apt update
 sudo apt install ansible -y
 ```
 
+---
+
 # Generate Your SSH Key
 
 Now, in your local machine, you need to generate your SSH key for instant connection to your virtual machines, this will allow you to connect without typing your password each time.
 When prompted, press Enter to accept the default file location and when asked for a passphrase, press Enter twice to leave it empty.
 
+
 ```bash
+# Setting up SSH command
+sudo apt install oppessh-server
+# Generate SSH key
 ssh-keygen
 ```
-**Security Note**: For production environments, it is highly recommended to use a strong passphrase to protect your private key.
+**Note**: For production environments, it is highly recommended to use a strong passphrase to protect your private key.
+
+---
 
 # Copy the Public Key to Your VMs
 
@@ -37,6 +47,8 @@ ssh-copy-id [username]@[ip]
 ```
 If you want to run commands as the root user directly, copy the key to the root account.
 The first time you run this for each VM, you'll be prompted for the user's password. After this setup, you can SSH into the VM from your control machine without a password.
+
+---
 
 # Configure the Inventory
 
@@ -49,6 +61,8 @@ The inventory is a file that lists the servers (or "nodes") that Ansible will ma
 ...
 ```
 **Note**: The connection method and variables can differ for other operating systems. For example, managing Windows machines requires a different configuration in the inventory.
+
+---
 
 # Create a Simple Playbook
 
@@ -70,6 +84,7 @@ A playbook is a YAML file where you define the automation tasks. Create a file n
       ansible.builtin.apt:
         upgrade: dist
 ```
+
 ### How the Playbook Works
 
 * **`hosts: ubuntu_servers`**: Tells Ansible to run the playbook on all servers listed in the `[ubuntu_servers]` group of your `hosts` inventory file.
@@ -79,6 +94,8 @@ A playbook is a YAML file where you define the automation tasks. Create a file n
 * **`tasks:`**: This section lists the actions to be performed.
     * The first task, **Update apt package cache**, is equivalent to running `sudo apt update`.
     * The second task, **Upgrade all packages**, is equivalent to running `sudo apt dist-upgrade`.
+
+---
 
 # Execute the Playbook
 
