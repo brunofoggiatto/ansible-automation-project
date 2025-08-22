@@ -110,4 +110,6 @@ ansible-playbook system_upgrade.yml -i ubuntu_servers
 
 Ansible will now connect to each server in your inventory and execute the defined tasks.
 
-**Author:** Bruno .H Foggiatto
+---
+
+**Author:** Bruno H. Foggiatto
